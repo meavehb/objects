@@ -1,11 +1,10 @@
-//Using apply
+//Using bind
 let s1 = {fname: "Juan", lname: "Dela Cruz"};
 let s2 = {fname: "Pedro", lname: "Reyes"};
 
-let info = ["2ITE", 19];
-
-function createInfo(section, age){
-    console.log(`${this.fname} ${this.lname}, ${age}, is enrolled in ${section}`);
+let joinName = function(){
+    console.log(`${this.fname} ${this.lname}`);
 }
 
-createInfo.apply(s1, info);
+let y = joinName.bind(s1);
+y();
