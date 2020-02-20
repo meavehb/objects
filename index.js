@@ -1,9 +1,11 @@
-//Using call
-let s1 = {name: "Juan Dela Cruz", section: "2ITE", age: 22};
-let s2 = {name: "Cathy Garcia", section: "2ITA", age: 20};
+//Using apply
+let s1 = {fname: "Juan", lname: "Dela Cruz"};
+let s2 = {fname: "Pedro", lname: "Reyes"};
 
-function displayInfo(){
-    console.log(`${this.name}, ${this.section}, ${this.age}`);
+let info = ["2ITE", 19];
+
+function createInfo(section, age){
+    console.log(`${this.fname} ${this.lname}, ${age}, is enrolled in ${section}`);
 }
 
-displayInfo.call(s1);
+createInfo.apply(s1, info);
