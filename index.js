@@ -1,9 +1,11 @@
-//Using constructor function
-function Student(name, section, age){
-    this.name = name;
-    this.section = section;
-    this.age = age;
+//Using ES6
+class Student{
+    constructor(name, section, age){
+        this.name = name;
+        this.section = section;
+        this.age = age;
+    }
 }
 
-let s1 = new Student("Cathy Garcia", "2ITE", 19);
-console.log(`The age of ${s1.name} is ${s1.age}`);
+let stud1 = new Student("Alvin Reyes", "2ITE", 18);
+document.write(`<h2>${stud1.name} is enrolled in ${stud1.section}</h2>`);
