@@ -1,13 +1,20 @@
-//Using static
+//Using encapsulation
 class Dog{
-    constructor(name, breed){
+    setName(name){
         this.name = name;
+    }
+    setBreed(breed){
         this.breed = breed;
     }
-    static eat(food){
-        console.log(`${this.name} eats plenty of ${food}`);
+    getName(){
+        return this.name;
+    }
+    getBreed(){
+        return this.breed;
     }
 }
 
-let sissi = new Dog("Sissi", "Corgi");
-Dog.eat("meat");
+let doggo = new Dog();
+doggo.setName("Sissi");
+doggo.setBreed("Corgi");
+console.log(`${doggo.getName()} is a ${doggo.getBreed()}`);
