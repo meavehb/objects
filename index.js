@@ -1,12 +1,9 @@
-//Using factory function
-//createStudent is a factory function
-function createStudent(name, section, age){
-    let stud = {};
-    stud.name = name;
-    stud.section = section;
-    stud.age = age;
-    return stud;
+//Using constructor function
+function Student(name, section, age){
+    this.name = name;
+    this.section = section;
+    this.age = age;
 }
 
-let s1 = createStudent("Pedro Morales", "2ITE", 20);
-document.write(`<h1>${s1.name}, ${s1.age}, is enrolled in ${s1.section}</h1>`)
+let s1 = new Student("Cathy Garcia", "2ITE", 19);
+console.log(`The age of ${s1.name} is ${s1.age}`);
