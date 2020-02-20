@@ -1,11 +1,7 @@
-//Using ES6
-class Student{
-    constructor(name, section, age){
-        this.name = name;
-        this.section = section;
-        this.age = age;
-    }
-}
+//Using prototype
+let stud1 = {name: "Juan Dela Cruz", section: "2ITE", age: 18, study:function(){
+    console.log("This student can study math");
+}};
+let stud2 = {name: "Pedro Morales", section: "2ITE", age: 19};
 
-let stud1 = new Student("Alvin Reyes", "2ITE", 18);
-document.write(`<h2>${stud1.name} is enrolled in ${stud1.section}</h2>`);
+stud1.study();
